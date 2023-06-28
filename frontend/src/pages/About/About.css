@@ -1,0 +1,24 @@
+.About {
+  padding: 0 30px 50px;
+}
+.About .header {
+  margin-bottom: 40px;
+}
+.About .header h1,
+.About .features h2 {
+  font-weight: 500;
+}
+.About .features {
+  margin-bottom: 40px;
+}
+.About .features ul li {
+  margin-bottom: 10px;
+}
+.About .more p.conclusion {
+  padding: 20px 0 20px 20px;
+}
+.About .more p.conclusion span {
+  margin-top: 10px;
+  color: var(--primary);
+  display: block;
+}

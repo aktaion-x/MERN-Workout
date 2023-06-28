@@ -14,11 +14,11 @@ const Login = () => {
     <form className="login" onSubmit={handleSubmit}>
       <h3>Login</h3>
       <label>
-        <snap>Email: </snap>
+        <span>Email: </span>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       </label>
       <label>
-        <snap>Password: </snap>
+        <span>Password: </span>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </label>
       {isLoading && (

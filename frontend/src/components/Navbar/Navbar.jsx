@@ -16,6 +16,9 @@ const Navbar = () => {
           <h1 className="no-select">Workout App</h1>
         </Link>
         <nav>
+          <div>
+            <Link to="/about">About</Link>
+          </div>
           {user && (
             <div>
               <button onClick={handleClick}>Logout</button>

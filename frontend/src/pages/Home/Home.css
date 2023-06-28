@@ -1,0 +1,70 @@
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+.workout-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.workouts-title {
+  margin: 10px auto 25px;
+  width: fit-content;
+  display: none;
+}
+.workout-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.workout-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.home a.add-workout {
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #333;
+  display: none;
+  width: fit-content;
+}
+
+.home a.add-workout:hover {
+  transition: color 0.3s, border 0.3s;
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+@media (max-width: 676px) {
+  .home {
+    grid-template-columns: initial;
+    gap: 30px;
+  }
+  .home form.create {
+    display: none;
+  }
+  .home .workouts-title {
+    display: block;
+  }
+  .home a.add-workout {
+    display: inline;
+    order: -1;
+  }
+}

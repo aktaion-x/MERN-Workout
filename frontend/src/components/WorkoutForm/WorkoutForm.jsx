@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import useWorkoutContext from '../../hooks/useWorkoutContext';
 import useAuthContext from '../../hooks/useAuthContext';
+import { useNavigate } from 'react-router-dom';
 
-const WrokoutForm = () => {
+const WrokoutForm = ({ goBackToHome }) => {
+  const navigate = useNavigate();
   const { dispatch } = useWorkoutContext();
   const [title, setTitle] = useState('');
   const [load, setLoad] = useState('');
@@ -42,6 +44,9 @@ const WrokoutForm = () => {
       setError(null);
       setEmptyFields([]);
       dispatch({ type: 'CREATE_WORKOUT', payload: json });
+      if (goBackToHome) {
+        navigate('/');
+      }
     }
   };
   return (
